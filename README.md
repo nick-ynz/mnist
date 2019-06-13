@@ -5,14 +5,14 @@
 2.There are two ways to get the application:  
 (1)Use `git clone` to get the application, and open the folder 'build_predict_1' in the terminal, then run `docker build --tag=[image_name] .`   
 (2)Or you can run `docker pull nickynz/mnist` in the terminal.  
-3.run `docker pull cassandra`.  
+3.run `docker pull cassandra`  
 4.After building the image, you will be able to use `docker images` command to see the built image.    
 5.Finally, you can run these images:   
 ```bash
 docker run --name some-cassandra -p 9042:9042 -d cassandra:latest
 docker run -d -p [port]:80 [image_name]
 ```
->The port is the local port that you want to have access to, and the image_name is the one you use in step 3 or `nickynz/mnist`.  
+>The port is the local port that you want to have access to, and the image_name is the one you use in step 3 or `nickynz/mnist`  
 >6.Use `curl` to transfer image to the application.
 ```bash
 curl -F "file=@/path/to/your/image/1.jpg" http://0.0.0.0:[port]/mnist
